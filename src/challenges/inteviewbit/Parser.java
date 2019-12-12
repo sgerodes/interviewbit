@@ -1,8 +1,6 @@
 package challenges.inteviewbit;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Parser {
@@ -40,5 +38,18 @@ public class Parser {
             lst.add(random.nextInt(maxVal-minVAl) + minVAl);
         }
         return lst;
+    }
+    public static ArrayList<Integer> generateRandomIntegerListWithUniqueValues(int length, int minVAl, int maxVal){
+        if (maxVal-minVAl < length) throw new RuntimeException("Cant create A list with unique values");
+        List<Integer> unique = new ArrayList<>();
+        for (int i = minVAl; i < maxVal; i++) {
+            unique.add(i);
+        }
+        Collections.shuffle(unique);
+        ArrayList<Integer> trimmed = new ArrayList<>();
+        for (int i = 0; i < length; i++) {
+            trimmed.add(unique.get(i));
+        }
+        return trimmed;
     }
 }

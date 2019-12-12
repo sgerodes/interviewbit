@@ -1,12 +1,13 @@
 package challenges.inteviewbit.collections;
 
- public class TreeNode {
-     public int val;
-     public TreeNode left;
-     public TreeNode right;
-     TreeNode(int x) {
+public class TreeNode {
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+
+    public TreeNode(int x) {
         val = x;
-        left=null;
-        right=null;
-     }
- }
+        left = null;
+        right = null;
+    }
+}

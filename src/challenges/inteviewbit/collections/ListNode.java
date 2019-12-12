@@ -26,7 +26,7 @@ public class ListNode {
         stringBuilder.append("[");
         ListNode A = this;
         while (A != null) {
-            if (LinkedList.isLooped(A)) {
+            if (ListNode.isLooped(A)) {
                 throw new LoopedLikedListException("List is Looped");
             }
             stringBuilder.append(A.val);
@@ -38,7 +38,7 @@ public class ListNode {
         return stringBuilder.toString();
     }
 
-    public static boolean haveSameValues(ListNode ptr1, ListNode ptr2){
+    public static boolean equals(ListNode ptr1, ListNode ptr2){
         while (ptr1 != null && ptr2 != null){
             if (!ptr1.equals(ptr2)) return false;
             ptr1 = ptr1.next;
@@ -72,6 +72,43 @@ public class ListNode {
             prev = listNode;
         }
         return head;
+    }
+
+    public static ListNode swapAdjacentNodesAfter(ListNode parent){
+        if (parent == null || parent.next == null || parent.next.next == null) return parent;
+        ListNode A = parent.next;
+        parent.next = A.next;
+        A.next = parent.next.next;
+        parent.next.next = A;
+        return parent;
+    }
+
+    public static ListNode insertionSortList(ListNode A) {
+        if (A == null || A.next == null) return A;
+        ListNode preHead = new ListNode(Integer.MIN_VALUE);
+        preHead.next = A;
+        boolean isSorted = false;
+        while (!isSorted){
+            isSorted = true;
+            ListNode parent = preHead;
+            while (parent.next != null && parent.next.next != null){
+                if (parent.next.val > parent.next.next.val){
+                    isSorted = false;
+                    ListNode.swapAdjacentNodesAfter(parent);
+                }
+                parent = parent.next;
+            }
+        }
+        return preHead.next;
+    }
+
+    public static int length(ListNode A){
+        int l = 0;
+        while (A != null) {
+            A = A.next;
+            l++;
+        }
+        return l;
     }
 
 }

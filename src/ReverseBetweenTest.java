@@ -1,4 +1,3 @@
-import challenges.inteviewbit.collections.LinkedList;
 import challenges.inteviewbit.collections.ListNode;
 import challenges.inteviewbit.Parser;
 import org.junit.jupiter.api.Test;
@@ -20,8 +19,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 3;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -31,12 +30,12 @@ class ReverseBetweenTest {
     void reverseBetween() {
 
         ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[1, 2, 3, 4, 5]");
-        ListNode head = LinkedListFactory.fromList(integers);
+        ListNode head = ListNode.fromList(integers);
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1, 4, 3, 2, 5]");
-        ListNode should = LinkedListFactory.fromList(shouldIntegers);
+        ListNode should = ListNode.fromList(shouldIntegers);
 
-        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
+        assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", should.repr(),head.repr()));
     }
 
     @Test
@@ -47,8 +46,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -62,8 +61,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -76,8 +75,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -86,23 +85,23 @@ class ReverseBetweenTest {
     void reverseBetween5() {
 
         ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[1]");
-        ListNode head = LinkedListFactory.fromList(integers);
+        ListNode head = ListNode.fromList(integers);
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1]");
-        ListNode should = LinkedListFactory.fromList(shouldIntegers);
+        ListNode should = ListNode.fromList(shouldIntegers);
 
-        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
+        assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", should.repr(),head.repr()));
     }
     @Test
     void reverseBetween6() {
 
         ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[]");
-        ListNode head = LinkedListFactory.fromList(integers);
+        ListNode head = ListNode.fromList(integers);
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[]");
-        ListNode should = LinkedListFactory.fromList(shouldIntegers);
+        ListNode should = ListNode.fromList(shouldIntegers);
 
-        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
+        assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", should.repr(),head.repr()));
     }
 
     @Test
@@ -113,8 +112,8 @@ class ReverseBetweenTest {
         int B = 0;
         int C = 10;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -126,8 +125,8 @@ class ReverseBetweenTest {
         int B = 0;
         int C = 3;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -139,8 +138,8 @@ class ReverseBetweenTest {
         int B = -500;
         int C = 500;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -153,8 +152,8 @@ class ReverseBetweenTest {
         int B = 500;
         int C = -500;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -167,19 +166,19 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 2;
 
-        ListNode actual = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = LinkedListFactory.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
     }
 
     private void  assertTrueForList(ListNode expected, ListNode actual, int B, int C, String failedString){
-        assertTrue(LinkedList.equals(expected, sol.reverseBetween(actual,B,C)),
-                String.format("%s\nactual\t\t%s\n", failedString, LinkedList.repr(actual)));
+        assertTrue(ListNode.equals(expected, sol.reverseBetween(actual,B,C)),
+                String.format("%s\nactual\t\t%s\n", failedString, actual.repr()));
     }
 
     private String failedString(ListNode expected, ListNode initial, int B, int C){
-        return String.format("\nexpected\t%s\ninitial\t\t%s with B=%d, C=%d;", LinkedList.repr(expected), LinkedList.repr(initial), B, C);
+        return String.format("\nexpected\t%s\ninitial\t\t%s with B=%d, C=%d;",expected.repr(), initial.repr(), B, C);
     }
 }

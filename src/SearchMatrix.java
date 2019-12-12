@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Solution {
+public class SearchMatrix {
     public int searchMatrix(ArrayList<ArrayList<Integer>> A, int B) {
         if (A.isEmpty() || A.get(0).isEmpty()) return 0;
         int up = 0;

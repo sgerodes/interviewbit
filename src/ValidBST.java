@@ -1,4 +1,4 @@
-import challenges.inteviebit.collections.TreeNode;
+import challenges.inteviewbit.collections.TreeNode;
 
 /**
  * Definition for binary tree

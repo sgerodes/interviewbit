@@ -1,6 +1,6 @@
-package challenges.inteviebit.collections;
+package challenges.inteviewbit.collections;
 
-import challenges.inteviebit.exceptions.LoopedLikedListException;
+import challenges.inteviewbit.exceptions.LoopedLikedListException;
 
 import java.util.HashSet;
 import java.util.List;

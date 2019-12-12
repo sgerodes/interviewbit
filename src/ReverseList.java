@@ -1,4 +1,4 @@
-import challenges.inteviebit.collections.ListNode;
+import challenges.inteviewbit.collections.ListNode;
 
 public class ReverseList {
 

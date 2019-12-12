@@ -1,4 +1,4 @@
-package challenges.inteviebit;
+package challenges.inteviewbit;
 
 import java.util.ArrayList;
 import java.util.Arrays;

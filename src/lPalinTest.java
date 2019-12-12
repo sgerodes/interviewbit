@@ -1,5 +1,5 @@
-import challenges.inteviebit.collections.ListNode;
-import challenges.inteviebit.Parser;
+import challenges.inteviewbit.collections.ListNode;
+import challenges.inteviewbit.Parser;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

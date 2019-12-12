@@ -1,4 +1,4 @@
-package challenges.inteviebit.collections;
+package challenges.inteviewbit.collections;
 
  public class TreeNode {
      public int val;

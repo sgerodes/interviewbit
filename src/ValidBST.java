@@ -1,4 +1,4 @@
-import challengeTester.interviewBit.TreeNode;
+import challenges.inteviebit.collections.TreeNode;
 
 /**
  * Definition for binary tree

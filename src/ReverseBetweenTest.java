@@ -1,7 +1,6 @@
-import challengeTester.interviewBit.IBLinkedList;
-import challengeTester.interviewBit.LinkedListFactory;
-import challengeTester.interviewBit.ListNode;
-import challengeTester.interviewBit.Parser;
+import challenges.inteviebit.collections.LinkedList;
+import challenges.inteviebit.collections.ListNode;
+import challenges.inteviebit.Parser;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -36,8 +35,8 @@ class ReverseBetweenTest {
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1, 4, 3, 2, 5]");
         ListNode should = LinkedListFactory.fromList(shouldIntegers);
 
-        assertTrue(IBLinkedList.hasSameValues(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", IBLinkedList.repr(should), IBLinkedList.repr(head)));
+        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
     }
 
     @Test
@@ -91,8 +90,8 @@ class ReverseBetweenTest {
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1]");
         ListNode should = LinkedListFactory.fromList(shouldIntegers);
 
-        assertTrue(IBLinkedList.hasSameValues(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", IBLinkedList.repr(should), IBLinkedList.repr(head)));
+        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
     }
     @Test
     void reverseBetween6() {
@@ -102,8 +101,8 @@ class ReverseBetweenTest {
         ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[]");
         ListNode should = LinkedListFactory.fromList(shouldIntegers);
 
-        assertTrue(IBLinkedList.hasSameValues(should, sol.reverseBetween(head,2,4)),
-                String.format("Expected %s, actual %s", IBLinkedList.repr(should), IBLinkedList.repr(head)));
+        assertTrue(LinkedList.equals(should, sol.reverseBetween(head,2,4)),
+                String.format("Expected %s, actual %s", LinkedList.repr(should), LinkedList.repr(head)));
     }
 
     @Test
@@ -176,11 +175,11 @@ class ReverseBetweenTest {
     }
 
     private void  assertTrueForList(ListNode expected, ListNode actual, int B, int C, String failedString){
-        assertTrue(IBLinkedList.hasSameValues(expected, sol.reverseBetween(actual,B,C)),
-                String.format("%s\nactual\t\t%s\n", failedString, IBLinkedList.repr(actual)));
+        assertTrue(LinkedList.equals(expected, sol.reverseBetween(actual,B,C)),
+                String.format("%s\nactual\t\t%s\n", failedString, LinkedList.repr(actual)));
     }
 
     private String failedString(ListNode expected, ListNode initial, int B, int C){
-        return String.format("\nexpected\t%s\ninitial\t\t%s with B=%d, C=%d;",IBLinkedList.repr(expected),IBLinkedList.repr(initial), B, C);
+        return String.format("\nexpected\t%s\ninitial\t\t%s with B=%d, C=%d;", LinkedList.repr(expected), LinkedList.repr(initial), B, C);
     }
 }

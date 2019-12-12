@@ -1,7 +1,5 @@
-import challengeTester.interviewBit.LinkedListFactory;
-import challengeTester.interviewBit.ListNode;
-import challengeTester.interviewBit.Parser;
-import challengeTester.interviewBit.RandomListFactory;
+import challenges.inteviebit.collections.ListNode;
+import challenges.inteviebit.Parser;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-import challengeTester.interviewBit.ListNode;
+import challenges.inteviebit.collections.ListNode;
 
 
 

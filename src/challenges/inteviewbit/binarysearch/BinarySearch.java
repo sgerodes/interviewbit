@@ -1,30 +1,8 @@
 package challenges.inteviewbit.binarysearch;
 
-import challenges.inteviewbit.collections.ListNode;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class BinarySearch <T extends Comparable<T>>{
-
-    public static int binarySearchIndexOfInteger(ArrayList<Integer> list, Integer toFind) {
-        return new BinarySearch<Integer>().binarySearchIndexOfObject(list, toFind);
-    }
-
-    public int binarySearchIndexOfObjectOld(ArrayList<T> list, T target) {
-        if (list.size() == 0 || !target.getClass().equals(list.get(0).getClass())) return -1;
-        int low = 0;
-        int mid;
-        int high = list.size()-1;
-
-        while (low < high){
-            mid = (high - low) / 2 + low;
-            if (list.get(mid).equals(target)) return mid;
-            if (list.get(mid).compareTo(target) > 0) high = mid;
-            else low = mid == low ? mid + 1 : mid;
-        }
-        return list.get(low).equals(target) ? low : -1;
-    }
 
     public int binarySearchIndexOfObject(List<T> list, T target) {
         int low = 0, high = list.size() - 1, mid;
@@ -84,14 +62,14 @@ public class BinarySearch <T extends Comparable<T>>{
 //        while(low <= high) {
 //            mid = (low + high) / 2;
 //
-//            boolean conditionFound = ;//TODO FILL CONDITION
+//            boolean conditionFound = ;//TO DO FILL CONDITION
 //            if(conditionFound) return mid;
 //
-//            boolean conditionGoUp = ; //TODO FILL CONDITION
+//            boolean conditionGoUp = ; //TO DO FILL CONDITION
 //            if(conditionGoUp) low = mid + 1;
 //            else high = mid - 1;
 //
 //        }
-//        return -1; //TODO If search Failed
+//        return -1; //TO DO If search Failed
 //    }
 }

@@ -1,9 +1,17 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.io.Serializable;
+import java.util.*;
 
 public class SearchMatrix {
 
+    public int searchMatrixCollections(ArrayList<ArrayList<Integer>> A, int B) {
+        if (A.isEmpty() || A.get(0).isEmpty()) return 0;
+
+        int rowIndex = Collections.binarySearch(A,  Arrays.asList(new Integer[]{B}),
+                (p1, p2) -> { if (p1.get(0) > p2.get(0)) return 1; if (p1.get(p1.size() - 1) < p2.get(0)) return -1; return 0; });
+        if ( rowIndex == -1) return 0;
+
+        return Collections.binarySearch(A.get(rowIndex), B) < 0 ? 0 : 1;
+    }
 
     public int searchMatrix(ArrayList<ArrayList<Integer>> A, int B) {
         if (A.isEmpty() || A.get(0).isEmpty()) return 0;

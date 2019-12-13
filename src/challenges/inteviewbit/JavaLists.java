@@ -2,6 +2,7 @@ package challenges.inteviewbit;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class JavaLists {
 
@@ -58,5 +59,29 @@ public class JavaLists {
         List<Integer> newValues = new ArrayList<>(initial);
         Collections.rotate(newValues, shift);
         return newValues;
+    }
+
+    public static ArrayList<Integer> listIntersection(ArrayList<Integer> a, ArrayList<Integer> b) {
+        ArrayList<Integer> aClone = new ArrayList<>(a);
+        ArrayList<Integer> bClone = new ArrayList<>(b);
+        Collections.sort(aClone);
+        Collections.sort(bClone);
+
+        ArrayList<Integer> intersection = new ArrayList<>();
+        int aPtr = 0, bPtr = 0;
+        while (aPtr < aClone.size() && bPtr < bClone.size()){
+            int aCurr = aClone.get(aPtr);
+            int bCurr = bClone.get(bPtr);
+            if (aCurr == bCurr) {
+                intersection.add(aCurr);
+                aPtr++;
+                bPtr++;
+            } else if (aCurr > bCurr) {
+                bPtr++;
+            } else {
+                aPtr++;
+            }
+        }
+        return intersection;
     }
 }

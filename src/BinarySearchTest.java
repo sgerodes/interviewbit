@@ -1,4 +1,4 @@
-import challenges.inteviewbit.Parser;
+import challenges.inteviewbit.JavaLists;
 import challenges.inteviewbit.binarysearch.BinarySearch;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
         int toFind = 3;
         int atIndex = initial.indexOf(toFind);
 
@@ -20,7 +20,7 @@ class BinarySearchTest {
     }
     @Test
     void binarySearchObject2() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4 5 6 10 15 18 100 500 501]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4 5 6 10 15 18 100 500 501]");
         int toFind = 501;
         int atIndex = initial.indexOf(toFind);
 
@@ -28,7 +28,7 @@ class BinarySearchTest {
     }
     @Test
     void binarySearchObject3() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
         int toFind = 1;
         int atIndex = initial.indexOf(toFind);
 
@@ -37,7 +37,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject4() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
         int toFind = 100;
         int atIndex = initial.indexOf(toFind);
 
@@ -46,7 +46,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject5() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]");
         int toFind = -1;
         int atIndex = initial.indexOf(toFind);
 
@@ -55,7 +55,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject6() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
         int toFind = 4;
         int atIndex = initial.indexOf(toFind);
 
@@ -64,7 +64,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject7() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
         int toFind = 5;
         int atIndex = initial.indexOf(toFind);
 
@@ -73,7 +73,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObject8() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4 5]");
         int toFind = 1;
         int atIndex = initial.indexOf(toFind);
 
@@ -85,7 +85,7 @@ class BinarySearchTest {
 
     @Test
     void binarySearchObjectCornerCases() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1]");
         int toFind = 1;
         int atIndex = initial.indexOf(toFind);
 
@@ -93,7 +93,7 @@ class BinarySearchTest {
     }
     @Test
     void binarySearchObjectCornerCases2() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[]");
         int toFind = 1;
         int atIndex = initial.indexOf(toFind);
 

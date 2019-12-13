@@ -1,4 +1,4 @@
-import challenges.inteviewbit.Parser;
+import challenges.inteviewbit.JavaLists;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ class BinarySearchFindCountTest {
     @Test
     void binaryFindCount() {
         for (int i = 0; i < 1000; i++) {
-            ArrayList<Integer> initial = Parser.generateRandomIntegerList(10, -2, 4);
+            ArrayList<Integer> initial = JavaLists.generateRandomIntegerList(10, -2, 4);
             int toFind = initial.get(rand.nextInt(initial.size()-1));
             Collections.sort(initial);
             int expected = Collections.frequency(initial, toFind);
@@ -26,7 +26,7 @@ class BinarySearchFindCountTest {
     @Test
     void binaryFindCount2() {
         for (int i = 0; i < 1000; i++) {
-            ArrayList<Integer> initial = Parser.generateRandomIntegerList(100, -20, 15);
+            ArrayList<Integer> initial = JavaLists.generateRandomIntegerList(100, -20, 15);
             int toFind = initial.get(rand.nextInt(initial.size()-1));
             Collections.sort(initial);
             int expected = Collections.frequency(initial, toFind);
@@ -36,7 +36,7 @@ class BinarySearchFindCountTest {
     @Test
     void binaryFindCount3() {
         for (int i = 0; i < 100; i++) {
-            ArrayList<Integer> initial = Parser.generateRandomIntegerList(100, -20, 15);
+            ArrayList<Integer> initial = JavaLists.generateRandomIntegerList(100, -20, 15);
             int toFind = -100;
             Collections.sort(initial);
             int expected = Collections.frequency(initial, toFind);
@@ -46,7 +46,7 @@ class BinarySearchFindCountTest {
     @Test
     void binaryFindCount4() {
         for (int i = 0; i < 100; i++) {
-            ArrayList<Integer> initial = Parser.generateRandomIntegerList(100, -20, 15);
+            ArrayList<Integer> initial = JavaLists.generateRandomIntegerList(100, -20, 15);
             int toFind = 100;
             Collections.sort(initial);
             int expected = Collections.frequency(initial, toFind);
@@ -56,7 +56,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 3 3 3 3 3 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 3 3 3 3 4]");
         int toFind = 3;
         boolean left = true;
         int expected = 2;
@@ -66,7 +66,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder3() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 4]");
         int toFind = 3;
         boolean left = false;
         int expected = -1;
@@ -75,7 +75,7 @@ class BinarySearchFindCountTest {
     }
     @Test
     void binarySearchBorder4() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 2 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 2 4]");
         int toFind = 3;
         boolean left = true;
         int expected = -1;
@@ -85,7 +85,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder5() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 1 1 1 2 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 1 1 1 2 4]");
         int toFind = 1;
         boolean left = true;
         int expected = 0;
@@ -95,7 +95,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder5_1() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 1 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 1 4]");
         int toFind = 1;
         boolean left = true;
         int expected = 0;
@@ -105,7 +105,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder6() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[1 1 1 1 2 4]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[1 1 1 1 2 4]");
         int toFind = 1;
         boolean left = false;
         int expected = 3;
@@ -115,7 +115,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder7() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[2 1 1 1 1]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[2 1 1 1 1]");
         int toFind = 1;
         boolean left = false;
         int expected = 4;
@@ -125,7 +125,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder8() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[]");
         int toFind = 3;
         boolean left = false;
         int expected = -1;
@@ -135,7 +135,7 @@ class BinarySearchFindCountTest {
 
     @Test
     void binarySearchBorder9() {
-        ArrayList<Integer> initial = Parser.fromStringWithSpaceSeparatedToList("[3]");
+        ArrayList<Integer> initial = JavaLists.fromStringWithSpaceSeparatedToList("[3]");
         int toFind = 3;
         boolean left = false;
         int expected = 0;

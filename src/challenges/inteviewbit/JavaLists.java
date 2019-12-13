@@ -3,7 +3,7 @@ package challenges.inteviewbit;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Parser {
+public class JavaLists {
 
     static Random random = new Random();
 
@@ -39,8 +39,9 @@ public class Parser {
         }
         return lst;
     }
+
     public static ArrayList<Integer> generateRandomIntegerListWithUniqueValues(int length, int minVAl, int maxVal){
-        if (maxVal-minVAl < length) throw new RuntimeException("Cant create A list with unique values");
+        if (maxVal-minVAl < length) throw new RuntimeException("Cant create a list with unique values");
         List<Integer> unique = new ArrayList<>();
         for (int i = minVAl; i < maxVal; i++) {
             unique.add(i);
@@ -51,5 +52,11 @@ public class Parser {
             trimmed.add(unique.get(i));
         }
         return trimmed;
+    }
+
+    public static List<Integer> shiftRight(List<Integer> initial, int shift) {
+        List<Integer> newValues = new ArrayList<>(initial);
+        Collections.rotate(newValues, shift);
+        return newValues;
     }
 }

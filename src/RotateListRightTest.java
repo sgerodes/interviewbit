@@ -1,4 +1,4 @@
-import challenges.inteviewbit.Parser;
+import challenges.inteviewbit.JavaLists;
 import challenges.inteviewbit.collections.ListNode;
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +10,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRight() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[3 4 1 2]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[3 4 1 2]"));
         int B = 2;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -19,8 +19,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRight2() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[2 3 4 1]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[2 3 4 1]"));
         int B = 3;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -28,8 +28,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRight3() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3 4]"));
         int B = 4;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -37,8 +37,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRight4() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[2 1]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[2 1]"));
         int B = 1;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -49,8 +49,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRightcornerCases1() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[]"));
         int B = 4;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -58,8 +58,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRightcornerCases2() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1]"));
         int B = 4;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -67,8 +67,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRightcornerCases3() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3]"));
         int B = 0;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));
@@ -76,8 +76,8 @@ class RotateListRightTest {
 
     @Test
     void rotateRightcornerCases4() {
-        ListNode initial = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3]"));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithSpaceSeparatedToList("[1 2 3]"));
+        ListNode initial = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3]"));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithSpaceSeparatedToList("[1 2 3]"));
         int B = 300;
         ListNode actual = sol.rotateRight(initial, B);
         assertTrue(ListNode.equals(expected, actual), errorMessage(expected, actual));

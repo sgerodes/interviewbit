@@ -1,5 +1,5 @@
 import challenges.inteviewbit.collections.ListNode;
-import challenges.inteviewbit.Parser;
+import challenges.inteviewbit.JavaLists;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -19,8 +19,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 3;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -29,9 +29,9 @@ class ReverseBetweenTest {
     @Test
     void reverseBetween() {
 
-        ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[1, 2, 3, 4, 5]");
+        ArrayList<Integer> integers = JavaLists.fromStringWithCommaSeparatedToList("[1, 2, 3, 4, 5]");
         ListNode head = ListNode.fromList(integers);
-        ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1, 4, 3, 2, 5]");
+        ArrayList<Integer> shouldIntegers = JavaLists.fromStringWithCommaSeparatedToList("[1, 4, 3, 2, 5]");
         ListNode should = ListNode.fromList(shouldIntegers);
 
         assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
@@ -46,8 +46,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -61,8 +61,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -75,8 +75,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 4;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -84,9 +84,9 @@ class ReverseBetweenTest {
     @Test
     void reverseBetween5() {
 
-        ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[1]");
+        ArrayList<Integer> integers = JavaLists.fromStringWithCommaSeparatedToList("[1]");
         ListNode head = ListNode.fromList(integers);
-        ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[1]");
+        ArrayList<Integer> shouldIntegers = JavaLists.fromStringWithCommaSeparatedToList("[1]");
         ListNode should = ListNode.fromList(shouldIntegers);
 
         assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
@@ -95,9 +95,9 @@ class ReverseBetweenTest {
     @Test
     void reverseBetween6() {
 
-        ArrayList<Integer> integers = Parser.fromStringWithCommaSeparatedToList("[]");
+        ArrayList<Integer> integers = JavaLists.fromStringWithCommaSeparatedToList("[]");
         ListNode head = ListNode.fromList(integers);
-        ArrayList<Integer> shouldIntegers = Parser.fromStringWithCommaSeparatedToList("[]");
+        ArrayList<Integer> shouldIntegers = JavaLists.fromStringWithCommaSeparatedToList("[]");
         ListNode should = ListNode.fromList(shouldIntegers);
 
         assertTrue(ListNode.equals(should, sol.reverseBetween(head,2,4)),
@@ -112,8 +112,8 @@ class ReverseBetweenTest {
         int B = 0;
         int C = 10;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -125,8 +125,8 @@ class ReverseBetweenTest {
         int B = 0;
         int C = 3;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -138,8 +138,8 @@ class ReverseBetweenTest {
         int B = -500;
         int C = 500;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -152,8 +152,8 @@ class ReverseBetweenTest {
         int B = 500;
         int C = -500;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
@@ -166,8 +166,8 @@ class ReverseBetweenTest {
         int B = 2;
         int C = 2;
 
-        ListNode actual = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr));
-        ListNode expected = ListNode.fromList(Parser.fromStringWithCommaSeparatedToList(listRepr1));
+        ListNode actual = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr));
+        ListNode expected = ListNode.fromList(JavaLists.fromStringWithCommaSeparatedToList(listRepr1));
         String failedString = failedString(expected, actual, B, C);
 
         assertTrueForList(expected,actual,B, C, failedString);
